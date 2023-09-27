@@ -1,0 +1,3 @@
+#Rule to ignore emacs backup files
+#.gitignore
+#~.
