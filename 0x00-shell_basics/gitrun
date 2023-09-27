@@ -1,4 +1,10 @@
 #!/bin/bash
 git add .
-git commit -m "Modify T 13"
+
+echo "Write your commit message "
+read mes
+
+git commit -m "$mes"
 git push
+
+echo "Local repository has been pushed"
