@@ -1,3 +1,5 @@
 #Rule to ignore emacs backup files
 #.gitignore
 #~.
+#gitrun
+#../gitignore
