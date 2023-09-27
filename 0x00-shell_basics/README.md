@@ -2,7 +2,7 @@
 # 1-listit - displays the contents of my current directory
 # 2-bring_me_home - changes the working directory to home directory
 # 3-listfiles - Displays current directory contents in long format
-#
+# 4-listmorefiles - Display current directory contents, including hidden files (starting with .). Use the long format
 #
 #
 #
