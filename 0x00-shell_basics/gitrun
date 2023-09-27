@@ -1,2 +1,4 @@
 #!/bin/bash
 git add .
+git commit -m "Modify T 13"
+git push
