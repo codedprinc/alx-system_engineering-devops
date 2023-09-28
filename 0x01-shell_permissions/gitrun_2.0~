@@ -1,0 +1,37 @@
+#!/bin/bash
+
+#echo "Do  you want to display file name , y/n"
+#read ans
+
+#if [[ "${ans}" == "y" ]]
+#then
+#    echo "Enter file s name"
+#    read fila
+
+#    less $fila
+
+#elif [[ "${ans}" == "n" ]]
+#then
+#    echo "Ok!"
+
+#else
+#    echo "Write y or n !!!"
+#    echo "run the script again !"
+#    exit 0 
+#fi
+
+
+echo "Enter file name to check no. of lines"
+read fil
+
+$ wc -l $fil
+
+#git add .
+
+#echo "Write your commit message "
+#read mes
+
+#git commit -m "$mes"
+#git push
+
+#echo "Local repository has been pushed"
