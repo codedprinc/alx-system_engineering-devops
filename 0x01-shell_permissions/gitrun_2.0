@@ -101,5 +101,11 @@ echo " "
 echo "----------------------------"
 echo " "
 
+git push
 
-echo "Write git push if the checker accepted your answer!!!!"
+echo " "
+echo "----------------------------"
+echo " "
+
+
+echo "LOCAL REPO HAS BEEN PUSHED!!"
