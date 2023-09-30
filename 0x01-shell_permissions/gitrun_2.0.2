@@ -87,9 +87,17 @@ echo " "
 echo "---------------------------"
 echo " "
 
-git add .
 
-echo "Write your commit message "
+
+echo "Do you wanna git add, commit and push? - y / n ?"
+read git
+
+if [[ "${git}" == "y" ]]
+then
+    
+    git add .
+
+    echo "Write your commit message "
 read mes
 
 echo " "
@@ -109,3 +117,43 @@ echo " "
 
 
 echo "LOCAL REPO HAS BEEN PUSHED!!"
+
+
+    
+elif [[ "${git}" == "n" ]]
+then
+    echo "Ok ! - not gitting ... "
+
+    
+else
+    echo "Write y or n! - .. closing script"
+    exit 3
+    
+fi
+
+
+
+echo " "
+echo "----------------------------"
+echo " "
+
+echo "Do you wanna clear? - y / n "
+read clear
+
+if [[ "${clear}" == "y" ]]
+then
+    echo "Ok ! CLEARING ............."
+    clear
+    exit 4
+    
+elif [[ "${clear}" == "n" ]]
+then
+    echo "Ok ! - NOT CLEARING..."
+    echo "End of script!"
+    exit 5
+    
+else
+    echo "Write y or n! - .. closing script ...."
+    exit 6
+    
+fi
