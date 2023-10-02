@@ -1,0 +1,159 @@
+#!/bin/bash
+echo "Do you wanna change file permissions for the answer or check if its ok?  -yes or no or check"
+read do
+
+echo "  "
+echo "  "
+if [[ "${do}" == "yes" ]]
+then
+    echo "Ok!!"
+    echo "File name"
+    read na
+    chmod u+x $na
+    ls -l $na
+    
+elif [[ "${do}" == "check" ]]
+then
+    echo "Ok! - Enter file name.."
+    read ch
+    ls -l $ch
+    
+elif [[ "${do}" == "no" ]]
+then
+    echo "Ok, not changing permissions"
+
+else
+    echo "Write yes or no - closing script .."
+    exit 0
+
+fi
+
+
+echo " "
+echo " -------------------------------------------"
+echo " "
+
+echo "Do  you want to display file's content name , y/n"
+read ans
+
+echo " "
+echo " "
+
+if [[ "${ans}" == "y" ]]
+then
+    echo "Enter file s name"
+    read fila
+
+    less $fila
+
+elif [[ "${ans}" == "n" ]]
+then
+    echo "Ok!"
+
+else
+    echo "Write y or n !!!"
+    echo "run the script again !"
+    exit 1 
+fi
+
+echo " "
+echo "-------------------------------"
+echo " "
+
+echo "Want to check no. of lines in file? - y or n?"
+read no
+
+echo " "
+echo " "
+
+if [[ "${no}" == "y" ]]
+then
+    echo "Enter file name to check no. of lines"
+    read fil
+    wc -l $fil
+    
+elif [[ "${no}" == "n" ]]
+then
+    echo "Ok ! - not checking no. of lines"
+
+    
+else
+    echo "Write y or n! - .. closing script"
+    exit 2
+    
+fi
+
+echo " "
+echo "---------------------------"
+echo " "
+
+
+
+echo "Do you wanna git add, commit and push? - y / n ?"
+read git
+
+if [[ "${git}" == "y" ]]
+then
+    
+    git add .
+
+    echo "Write your commit message "
+read mes
+
+echo " "
+echo " "
+
+git commit -m "$mes"
+
+echo " "
+echo "----------------------------"
+echo " "
+
+git push
+
+echo " "
+echo "----------------------------"
+echo " "
+
+
+echo "LOCAL REPO HAS BEEN PUSHED!!"
+
+
+    
+elif [[ "${git}" == "n" ]]
+then
+    echo "Ok ! - not gitting ... "
+
+    
+else
+    echo "Write y or n! - .. closing script"
+    exit 3
+    
+fi
+
+
+
+echo " "
+echo "----------------------------"
+echo " "
+
+echo "Do you wanna clear? - y / n "
+read clear
+
+if [[ "${clear}" == "y" ]]
+then
+    echo "Ok ! CLEARING ............."
+    clear
+    exit 4
+    
+elif [[ "${clear}" == "n" ]]
+then
+    echo "Ok ! - NOT CLEARING..."
+    echo "End of script!"
+    exit 5
+    
+else
+    echo "Write y or n! - .. closing script ...."
+    exit 6
+    
+fi
