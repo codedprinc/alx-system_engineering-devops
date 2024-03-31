@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script is diplaying "Best School" 10 times using `until` loop
+
+i=11
+
+until [ $i == 1 ]
+do
+	echo "Best School"
+	i=$((i-1))
+done
