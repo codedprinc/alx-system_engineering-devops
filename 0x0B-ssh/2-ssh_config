@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# configured to use the private key ~/.ssh/school .SSH client configuration must be configured to refuse to authenticate using a password.
+Host 531493-web-01
+     IdentityFile ~/.ssh/id_rsa
+     PasswordAuthentication no
