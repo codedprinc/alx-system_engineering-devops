@@ -2,3 +2,6 @@
 # Configures a new ubuntu machine to install nginx and listen on port 80
 sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
+cd /var/www/html
+rm index.nginx-debian.html
+echo "Hello World!" > index.nginx-debian.html
